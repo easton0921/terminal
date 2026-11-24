@@ -3,11 +3,12 @@ require("dotenv").config()
 const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
-const apiRoutes = require("./routes")
-const sequelize = require("./config/database")
-const authService = require("./services/auth.service")
-const messages = require("./utils/messages")
-const seedAdmin = require("./seed/admin.seed")
+const path = require("path")
+const apiRoutes = require("./app/routes")
+const sequelize = require("./app/config/database")
+const authService = require("./app/services/auth.service")
+const messages = require("./app/utils/messages")
+const seedAdmin = require("./app/seed/admin.seed")
 
 // Schema synchronization stays out of normal server startup.
 const app = express()
@@ -28,7 +29,7 @@ app.use(
 )
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, "app", "public")))
 
 app.use("/api", apiRoutes)
 

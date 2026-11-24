@@ -1,0 +1,8 @@
+node_modules
+.env
+uploads
+public
+docs
+backups
+package-lock.json
+
