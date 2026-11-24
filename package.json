@@ -1,0 +1,32 @@
+{
+  "name": "terminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easton0921/terminal.git"
+  },
+  "author": "Rishav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easton0921/terminal/issues"
+  },
+  "homepage": "https://github.com/easton0921/terminal#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "joi": "^18.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "nodemailer": "^10.6.0",
+    "pg": "^8.23.1",
+    "sequelize": "^6.37.8"
+  }
+}
