@@ -57,6 +57,9 @@ if (require.main === module) {
     try {
       authService.getJwtSecret()
       await sequelize.authenticate()
+      if (process.env.DATABASE_SYNC_ALTER === "true") {
+        await sequelize.sync({ alter: true })
+      }
       await seedAdmin()
     } catch (error) {
       console.error("Application startup failed:", error)
